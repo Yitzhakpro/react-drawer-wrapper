@@ -1,3 +1,3 @@
 import DrawerWrapper from './DrawerWrapper'
 
-export { DrawerWrapper }
+export default DrawerWrapper
