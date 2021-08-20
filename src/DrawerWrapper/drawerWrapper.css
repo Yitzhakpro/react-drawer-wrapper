@@ -1,0 +1,23 @@
+/* top-side drawer */
+.drawer-top-mode {
+  display: flex;
+  flex-direction: column;
+}
+
+/* bottom-side drawer */
+.drawer-bottom-mode {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* left-side drawer */
+.drawer-left-mode {
+  display: flex;
+  flex-direction: row;
+}
+
+/* right side drawer */
+.drawer-right-mode {
+  display: flex;
+  flex-direction: row-reverse;
+}

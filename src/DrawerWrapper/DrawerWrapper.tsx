@@ -6,7 +6,7 @@ import './drawerWrapper.css'
 
 interface IDrawerWrapperProps {
   className?: string
-  direction?: 'left' | 'right'
+  direction?: 'top' | 'bottom' | 'left' | 'right'
   children?: React.ReactNode | React.ReactNode[]
 }
 
@@ -14,7 +14,9 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
   const { className, direction = 'left', children } = props
 
   return (
-    <div className={clsx(className, `drawer-${direction}`)}>{children}</div>
+    <div className={clsx(className, `drawer-${direction}-mode`)}>
+      {children}
+    </div>
   )
 }
 
