@@ -7,6 +7,7 @@ export interface IDrawerProps {
   style?: React.CSSProperties
   open?: boolean
   direction?: 'top' | 'bottom' | 'left' | 'right'
+  speed?: number
   height?: string
   children?: React.ReactNode | React.ReactNode[]
 }
@@ -17,6 +18,7 @@ const Drawer = (props: IDrawerProps) => {
     style,
     open = false,
     direction = 'left',
+    speed = 0.5,
     height = '100%',
     children
   } = props
@@ -26,7 +28,7 @@ const Drawer = (props: IDrawerProps) => {
   return (
     <div
       className={clsx(className, drawerClassName)}
-      style={{ height, ...style }}
+      style={{ ...style, height, transition: `width ${speed}s linear` }}
     >
       {children}
       {direction}

@@ -1,0 +1,17 @@
+/* left - mode */
+.drawer-left-mode .drawer-wrapper-content.close {
+  width: 100%;
+}
+
+.drawer-left-mode .drawer-wrapper-content.open {
+  width: 70%;
+}
+
+/* right - mode */
+.drawer-right-mode .drawer-wrapper-content.close {
+  width: 100%;
+}
+
+.drawer-right-mode .drawer-wrapper-content.open {
+  width: 70%;
+}

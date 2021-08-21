@@ -6,16 +6,20 @@ export interface IContentProps {
   className?: string
   style?: React.CSSProperties
   open?: boolean
+  speed?: number
   children?: React.ReactNode | React.ReactNode[]
 }
 
 const Content = (props: IContentProps) => {
-  const { className, style, open, children } = props
+  const { className, style, open = false, speed = 0.5, children } = props
 
   const standardClassName = `drawer-wrapper-content ${open ? 'open' : 'close'}`
 
   return (
-    <div className={clsx(className, standardClassName)} style={style}>
+    <div
+      className={clsx(className, standardClassName)}
+      style={{ ...style, transition: `width ${speed}s linear` }}
+    >
       {children}
     </div>
   )
