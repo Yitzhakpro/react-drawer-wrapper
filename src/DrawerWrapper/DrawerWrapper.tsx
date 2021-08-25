@@ -34,7 +34,7 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
             return React.cloneElement(child, { open, direction, speed })
 
           case 'Content':
-            return React.cloneElement(child, { open, speed })
+            return React.cloneElement(child, { open, direction, speed })
 
           default:
             return child

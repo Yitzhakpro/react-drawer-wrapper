@@ -1,3 +1,21 @@
+/* top - mode */
+.drawer-top-mode .drawer-wrapper-content.close {
+  height: 100%;
+}
+
+.drawer-top-mode .drawer-wrapper-content.open {
+  height: 80%;
+}
+
+/* bottom - mode */
+.drawer-bottom-mode .drawer-wrapper-content.close {
+  height: 100%;
+}
+
+.drawer-bottom-mode .drawer-wrapper-content.open {
+  height: 80%;
+}
+
 /* left - mode */
 .drawer-left-mode .drawer-wrapper-content.close {
   width: 100%;

@@ -1,3 +1,23 @@
+/* top - mode */
+.drawer-top-mode .drawer.close {
+  height: 0% !important;
+  overflow: hidden;
+}
+
+.drawer-top-mode .drawer.open {
+  overflow: auto;
+}
+
+/* bottom - mode */
+.drawer-bottom-mode .drawer.close {
+  height: 0% !important;
+  overflow: hidden;
+}
+
+.drawer-bottom-mode .drawer.open {
+  overflow-y: auto;
+}
+
 /* left - mode */
 .drawer-left-mode .drawer.close {
   width: 0%;
