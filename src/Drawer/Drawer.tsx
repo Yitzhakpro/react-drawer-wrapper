@@ -18,7 +18,7 @@ const Drawer = (props: IDrawerProps) => {
     style,
     open = false,
     direction = 'left',
-    speed = 0.5,
+    speed = 0.3,
     height = direction === 'left' || direction === 'right' ? '100%' : '20%',
     children
   } = props
