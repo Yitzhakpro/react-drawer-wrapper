@@ -2,6 +2,11 @@ import * as React from 'react'
 import clsx from 'clsx'
 import Drawer from '../Drawer'
 import Content from '../Content'
+import {
+  DEFAULT_DRAWER_STATE,
+  DEFAULT_DRAWER_DIRECTION,
+  DEFAULT_DRAWER_TRANSITION_SPEED
+} from '../Constants'
 import './drawerWrapper.css'
 
 interface IDrawerWrapperProps {
@@ -17,9 +22,9 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
   const {
     className,
     style,
-    open = false,
-    direction = 'left',
-    speed = 0.3,
+    open = DEFAULT_DRAWER_STATE,
+    direction = DEFAULT_DRAWER_DIRECTION,
+    speed = DEFAULT_DRAWER_TRANSITION_SPEED,
     children
   } = props
 

@@ -1,5 +1,10 @@
 import * as React from 'react'
 import clsx from 'clsx'
+import {
+  DEFAULT_DRAWER_STATE,
+  DEFAULT_DRAWER_DIRECTION,
+  DEFAULT_DRAWER_TRANSITION_SPEED
+} from '../Constants'
 import './content.css'
 
 export interface IContentProps {
@@ -15,9 +20,9 @@ const Content = (props: IContentProps) => {
   const {
     className,
     style,
-    open = false,
-    direction = 'left',
-    speed = 0.3,
+    open = DEFAULT_DRAWER_STATE,
+    direction = DEFAULT_DRAWER_DIRECTION,
+    speed = DEFAULT_DRAWER_TRANSITION_SPEED,
     children
   } = props
 

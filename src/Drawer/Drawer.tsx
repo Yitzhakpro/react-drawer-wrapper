@@ -1,5 +1,10 @@
 import * as React from 'react'
 import clsx from 'clsx'
+import {
+  DEFAULT_DRAWER_STATE,
+  DEFAULT_DRAWER_DIRECTION,
+  DEFAULT_DRAWER_TRANSITION_SPEED
+} from '../Constants'
 import './Drawer.css'
 
 export interface IDrawerProps {
@@ -16,9 +21,9 @@ const Drawer = (props: IDrawerProps) => {
   const {
     className,
     style,
-    open = false,
-    direction = 'left',
-    speed = 0.3,
+    open = DEFAULT_DRAWER_STATE,
+    direction = DEFAULT_DRAWER_DIRECTION,
+    speed = DEFAULT_DRAWER_TRANSITION_SPEED,
     height = direction === 'left' || direction === 'right' ? '100%' : '20%',
     children
   } = props
