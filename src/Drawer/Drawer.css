@@ -1,0 +1,39 @@
+/* top - mode */
+.drawer-top-mode .drawer.close {
+  height: 0% !important;
+  overflow: hidden;
+}
+
+.drawer-top-mode .drawer.open {
+  overflow: auto;
+}
+
+/* bottom - mode */
+.drawer-bottom-mode .drawer.close {
+  height: 0% !important;
+  overflow: hidden;
+}
+
+.drawer-bottom-mode .drawer.open {
+  overflow: auto;
+}
+
+/* left - mode */
+.drawer-left-mode .drawer.close {
+  width: 0%;
+  overflow: hidden;
+}
+
+.drawer-left-mode .drawer.open {
+  width: 30%;
+}
+
+/* right - mode */
+.drawer-right-mode .drawer.close {
+  width: 0%;
+  overflow: hidden;
+}
+
+.drawer-right-mode .drawer.open {
+  width: 30%;
+}

@@ -1,12 +1,45 @@
 import * as React from 'react'
+import clsx from 'clsx'
+import {
+  DEFAULT_DRAWER_STATE,
+  DEFAULT_DRAWER_DIRECTION,
+  DEFAULT_DRAWER_TRANSITION_SPEED
+} from '../Constants'
 import './content.css'
 
 export interface IContentProps {
+  className?: string
+  style?: React.CSSProperties
+  open?: boolean
+  direction?: string
+  speed?: number
   children?: React.ReactNode | React.ReactNode[]
 }
 
-const content = ({ children }: IContentProps) => {
-  return <div>{children}</div>
+const Content = (props: IContentProps) => {
+  const {
+    className,
+    style,
+    open = DEFAULT_DRAWER_STATE,
+    direction = DEFAULT_DRAWER_DIRECTION,
+    speed = DEFAULT_DRAWER_TRANSITION_SPEED,
+    children
+  } = props
+
+  const standardClassName = `drawer-wrapper-content ${open ? 'open' : 'close'}`
+  const transitionMode =
+    direction === 'left' || direction === 'right' ? 'width' : 'height'
+
+  return (
+    <div
+      className={clsx(className, standardClassName)}
+      style={{ ...style, transition: `${transitionMode} ${speed}s linear` }}
+    >
+      {children}
+    </div>
+  )
 }
 
-export default content
+Content.displayName = 'Content'
+
+export default Content
