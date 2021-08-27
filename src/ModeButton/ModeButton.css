@@ -26,12 +26,12 @@
 }
 
 /* bottom - mode */
-.drawer-top-mode .drawer-wrapper-mode-btn.short {
+.drawer-bottom-mode .drawer-wrapper-mode-btn.short {
   width: var(--vertical-short-btn-size);
   left: calc(50% - (var(--vertical-short-btn-size) / 2));
 }
 
-.drawer-top-mode .drawer-wrapper-mode-btn.long {
+.drawer-bottom-mode .drawer-wrapper-mode-btn.long {
   width: var(--vertical-long-btn-size);
   left: calc(50% - (var(--vertical-long-btn-size) / 2));
 }
