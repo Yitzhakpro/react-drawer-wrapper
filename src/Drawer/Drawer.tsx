@@ -42,7 +42,6 @@ const Drawer = (props: IDrawerProps) => {
       }}
     >
       {children}
-      {direction}
     </div>
   )
 }
