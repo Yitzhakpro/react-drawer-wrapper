@@ -1,6 +1,7 @@
 import * as React from 'react'
 import clsx from 'clsx'
 import { DEFAULT_DRAWER_BTN_SIZE } from '../Constants'
+import Arrow from '../assets/icons/ArrowIcon'
 import './ModeButton.css'
 
 interface IModeButtonProps {
@@ -23,7 +24,7 @@ const ModeButton = (props: IModeButtonProps) => {
       className={clsx(className, 'drawer-wrapper-mode-btn', size)}
       onClick={() => onModeChange(!open)}
     >
-      &gt;
+      <Arrow height='20px' width='20px' />
     </button>
   )
 }
