@@ -1,5 +1,6 @@
 import * as React from 'react'
 import clsx from 'clsx'
+import { DEFAULT_DRAWER_BTN_SIZE } from '../Constants'
 import './ModeButton.css'
 
 interface IModeButtonProps {
@@ -10,14 +11,19 @@ interface IModeButtonProps {
 }
 
 const ModeButton = (props: IModeButtonProps) => {
-  const { className, size = 'short', open, onModeChange } = props
+  const {
+    className,
+    size = DEFAULT_DRAWER_BTN_SIZE,
+    open,
+    onModeChange
+  } = props
 
   return (
     <button
-      className={clsx(className, 'drawer-wrapper-mode-btn')}
+      className={clsx(className, 'drawer-wrapper-mode-btn', size)}
       onClick={() => onModeChange(!open)}
     >
-      {size}
+      &gt;
     </button>
   )
 }

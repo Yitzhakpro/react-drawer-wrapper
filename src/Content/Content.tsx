@@ -1,6 +1,7 @@
 import * as React from 'react'
 import clsx from 'clsx'
 import {
+  DEFAULT_DRAWER_BTN_SIZE,
   DEFAULT_DRAWER_STATE,
   DEFAULT_DRAWER_DIRECTION,
   DEFAULT_DRAWER_TRANSITION_SPEED
@@ -23,7 +24,7 @@ const Content = (props: IContentProps) => {
   const {
     className,
     style,
-    buttonSize = 'short',
+    buttonSize = DEFAULT_DRAWER_BTN_SIZE,
     open = DEFAULT_DRAWER_STATE,
     onModeChange = () => {},
     direction = DEFAULT_DRAWER_DIRECTION,

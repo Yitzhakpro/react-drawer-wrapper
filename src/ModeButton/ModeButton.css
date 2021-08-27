@@ -1,22 +1,68 @@
 /* general style */
 .drawer-wrapper-mode-btn {
+  /* direction - left | right */
+  --horizontal-long-btn-size: 10vh;
+  --horizontal-short-btn-size: 5vh;
+
+  /* direction - top | bottom */
+  --vertical-long-btn-size: 10vw;
+  --vertical-short-btn-size: 5vw;
+}
+
+/* top - mode */
+.drawer-top-mode .drawer-wrapper-mode-btn.short {
+  width: var(--vertical-short-btn-size);
+  left: calc(50% - (var(--vertical-short-btn-size) / 2));
+}
+
+.drawer-top-mode .drawer-wrapper-mode-btn.long {
+  width: var(--vertical-long-btn-size);
+  left: calc(50% - (var(--vertical-long-btn-size) / 2));
 }
 
 .drawer-top-mode .drawer-wrapper-mode-btn {
   position: absolute;
   top: 0;
-  left: 48%;
+}
+
+/* bottom - mode */
+.drawer-top-mode .drawer-wrapper-mode-btn.short {
+  width: var(--vertical-short-btn-size);
+  left: calc(50% - (var(--vertical-short-btn-size) / 2));
+}
+
+.drawer-top-mode .drawer-wrapper-mode-btn.long {
+  width: var(--vertical-long-btn-size);
+  left: calc(50% - (var(--vertical-long-btn-size) / 2));
 }
 
 .drawer-bottom-mode .drawer-wrapper-mode-btn {
   position: absolute;
   bottom: 0;
-  left: 48%;
+}
+
+/* left - mode */
+.drawer-left-mode .drawer-wrapper-mode-btn.short {
+  height: var(--horizontal-short-btn-size);
+}
+
+.drawer-left-mode .drawer-wrapper-mode-btn.long {
+  height: var(--horizontal-long-btn-size);
 }
 
 .drawer-left-mode .drawer-wrapper-mode-btn {
   position: absolute;
   top: 10%;
+  left: 0px;
+}
+
+/* right - mode */
+.drawer-right-mode .drawer-wrapper-mode-btn.short {
+  height: var(--horizontal-short-btn-size);
+}
+
+.drawer-right-mode .drawer-wrapper-mode-btn.long {
+  height: var(--horizontal-long-btn-size);
 }
 
 .drawer-right-mode .drawer-wrapper-mode-btn {
