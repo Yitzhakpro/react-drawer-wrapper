@@ -4,12 +4,6 @@
 }
 
 /* top - mode */
-.drawer-top-mode .drawer-wrapper-mode-btn {
-  position: absolute;
-  top: 0;
-  left: 48%;
-}
-
 .drawer-top-mode .drawer-wrapper-content.close {
   height: 100%;
 }
@@ -19,12 +13,6 @@
 }
 
 /* bottom - mode */
-.drawer-bottom-mode .drawer-wrapper-mode-btn {
-  position: absolute;
-  bottom: 0;
-  left: 48%;
-}
-
 .drawer-bottom-mode .drawer-wrapper-content.close {
   height: 100%;
 }
@@ -34,11 +22,6 @@
 }
 
 /* left - mode */
-.drawer-left-mode .drawer-wrapper-mode-btn {
-  position: absolute;
-  top: 10%;
-}
-
 .drawer-left-mode .drawer-wrapper-content.close {
   width: 100%;
 }
@@ -48,12 +31,6 @@
 }
 
 /* right - mode */
-.drawer-right-mode .drawer-wrapper-mode-btn {
-  position: absolute;
-  top: 10%;
-  right: 0px;
-}
-
 .drawer-right-mode .drawer-wrapper-content.close {
   width: 100%;
 }
