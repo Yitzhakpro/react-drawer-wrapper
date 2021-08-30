@@ -47,6 +47,9 @@
   border: 0;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+
+  -webkit-box-shadow: 0px 5px 15px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 15px -1px rgba(0, 0, 0, 0.2);
 }
 
 .drawer-top-mode .close .drawer-wrapper-mode-btn svg {
@@ -79,6 +82,9 @@
   border: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+
+  -webkit-box-shadow: 0px -5px 15px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -5px 15px -1px rgba(0, 0, 0, 0.2);
 }
 
 .drawer-bottom-mode .close .drawer-wrapper-mode-btn svg {
@@ -114,6 +120,9 @@
   border: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+
+  -webkit-box-shadow: 10px 0px 15px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 0px 15px -1px rgba(0, 0, 0, 0.2);
 }
 
 .drawer-left-mode .close .drawer-wrapper-mode-btn svg {
@@ -149,6 +158,9 @@
   border: 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+
+  -webkit-box-shadow: -5px 0px 15px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: -5px 0px 15px -1px rgba(0, 0, 0, 0.2);
 }
 
 .drawer-right-mode .close .drawer-wrapper-mode-btn svg {
