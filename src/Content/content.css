@@ -1,3 +1,8 @@
+/* general styles */
+.drawer-wrapper-content {
+  position: relative;
+}
+
 /* top - mode */
 .drawer-top-mode .drawer-wrapper-content.close {
   height: 100%;

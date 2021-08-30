@@ -1,0 +1,168 @@
+/* general style */
+.drawer-wrapper-mode-btn {
+  /* direction - left | right */
+  --horizontal-long-btn-size: 10vh;
+  --horizontal-short-btn-size: 5vh;
+
+  /* direction - top | bottom */
+  --vertical-long-btn-size: 10vw;
+  --vertical-short-btn-size: 5vw;
+
+  padding: 0;
+
+  color: #333;
+  cursor: pointer;
+}
+
+.drawer-wrapper-mode-btn:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.open .drawer-wrapper-mode-btn {
+  background: rgb(201, 49, 49);
+  color: white;
+  transition: background 0.05s linear;
+}
+
+.open .drawer-wrapper-mode-btn:hover {
+  background: whitesmoke;
+  color: rgb(221, 54, 54);
+}
+
+/* top - mode */
+.drawer-top-mode .drawer-wrapper-mode-btn.short {
+  width: var(--vertical-short-btn-size);
+  left: calc(50% - (var(--vertical-short-btn-size) / 2));
+}
+
+.drawer-top-mode .drawer-wrapper-mode-btn.long {
+  width: var(--vertical-long-btn-size);
+  left: calc(50% - (var(--vertical-long-btn-size) / 2));
+}
+
+.drawer-top-mode .drawer-wrapper-mode-btn {
+  position: absolute;
+  top: 0;
+
+  border: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.drawer-top-mode .close .drawer-wrapper-mode-btn svg {
+  transition: margin-top 0.05s linear;
+}
+
+.drawer-top-mode .close .drawer-wrapper-mode-btn:hover svg {
+  margin-top: 1vh;
+}
+
+.drawer-top-mode .open .drawer-wrapper-mode-btn svg {
+  transform: rotate(180deg);
+}
+
+/* bottom - mode */
+.drawer-bottom-mode .drawer-wrapper-mode-btn.short {
+  width: var(--vertical-short-btn-size);
+  left: calc(50% - (var(--vertical-short-btn-size) / 2));
+}
+
+.drawer-bottom-mode .drawer-wrapper-mode-btn.long {
+  width: var(--vertical-long-btn-size);
+  left: calc(50% - (var(--vertical-long-btn-size) / 2));
+}
+
+.drawer-bottom-mode .drawer-wrapper-mode-btn {
+  position: absolute;
+  bottom: 0;
+
+  border: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.drawer-bottom-mode .close .drawer-wrapper-mode-btn svg {
+  transition: margin-bottom 0.05s linear;
+}
+
+.drawer-bottom-mode .close .drawer-wrapper-mode-btn:hover svg {
+  margin-bottom: 1vh;
+}
+
+.drawer-bottom-mode .drawer-wrapper-mode-btn svg {
+  transform: rotate(180deg);
+}
+
+.drawer-bottom-mode .open .drawer-wrapper-mode-btn svg {
+  transform: rotate(0deg);
+}
+
+/* left - mode */
+.drawer-left-mode .drawer-wrapper-mode-btn.short {
+  height: var(--horizontal-short-btn-size);
+}
+
+.drawer-left-mode .drawer-wrapper-mode-btn.long {
+  height: var(--horizontal-long-btn-size);
+}
+
+.drawer-left-mode .drawer-wrapper-mode-btn {
+  position: absolute;
+  top: 10%;
+  left: 0px;
+
+  border: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.drawer-left-mode .close .drawer-wrapper-mode-btn svg {
+  transition: margin-left 0.05s linear;
+}
+
+.drawer-left-mode .close .drawer-wrapper-mode-btn:hover svg {
+  margin-left: 1.5vh;
+}
+
+.drawer-left-mode .drawer-wrapper-mode-btn svg {
+  transform: rotate(-90deg);
+}
+
+.drawer-left-mode .open .drawer-wrapper-mode-btn svg {
+  transform: rotate(90deg);
+}
+
+/* right - mode */
+.drawer-right-mode .drawer-wrapper-mode-btn.short {
+  height: var(--horizontal-short-btn-size);
+}
+
+.drawer-right-mode .drawer-wrapper-mode-btn.long {
+  height: var(--horizontal-long-btn-size);
+}
+
+.drawer-right-mode .drawer-wrapper-mode-btn {
+  position: absolute;
+  top: 10%;
+  right: 0px;
+
+  border: 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.drawer-right-mode .close .drawer-wrapper-mode-btn svg {
+  transition: margin-right 0.05s linear;
+}
+
+.drawer-right-mode .close .drawer-wrapper-mode-btn:hover svg {
+  margin-right: 1.5vh;
+}
+
+.drawer-right-mode .drawer-wrapper-mode-btn svg {
+  transform: rotate(90deg);
+}
+
+.drawer-right-mode .open .drawer-wrapper-mode-btn svg {
+  transform: rotate(-90deg);
+}

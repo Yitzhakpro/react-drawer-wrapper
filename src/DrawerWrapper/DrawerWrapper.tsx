@@ -12,7 +12,9 @@ import './drawerWrapper.css'
 interface IDrawerWrapperProps {
   className?: string
   style?: React.CSSProperties
+  buttonSize?: 'short' | 'long'
   open: boolean
+  onModeChange: (nextMode: boolean) => any
   direction?: 'top' | 'bottom' | 'left' | 'right'
   speed?: number
   children?: React.ReactNode | React.ReactNode[]
@@ -22,11 +24,16 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
   const {
     className,
     style,
+    buttonSize,
     open = DEFAULT_DRAWER_STATE,
+    onModeChange,
     direction = DEFAULT_DRAWER_DIRECTION,
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
     children
   } = props
+
+  const buttonModeSize =
+    direction === 'left' || direction === 'right' ? 'short' : 'long'
 
   return (
     <div
@@ -39,7 +46,13 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
             return React.cloneElement(child, { open, direction, speed })
 
           case 'Content':
-            return React.cloneElement(child, { open, direction, speed })
+            return React.cloneElement(child, {
+              buttonSize: buttonSize ? buttonSize : buttonModeSize,
+              open,
+              onModeChange,
+              direction,
+              speed
+            })
 
           default:
             return child
