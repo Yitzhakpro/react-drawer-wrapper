@@ -2,6 +2,8 @@
 .drawer {
   overflow: auto;
   background: whitesmoke;
+
+  --drawer-border-radius: 8px;
 }
 
 .drawer-content {
@@ -9,6 +11,11 @@
 }
 
 /* top - mode */
+.drawer-top-mode .drawer {
+  border-bottom-left-radius: var(--drawer-border-radius);
+  border-bottom-right-radius: var(--drawer-border-radius);
+}
+
 .drawer-top-mode .drawer.close {
   height: 0% !important;
   overflow: hidden;
@@ -22,6 +29,11 @@
 }
 
 /* bottom - mode */
+.drawer-bottom-mode .drawer {
+  border-top-left-radius: var(--drawer-border-radius);
+  border-top-right-radius: var(--drawer-border-radius);
+}
+
 .drawer-bottom-mode .drawer.close {
   height: 0% !important;
   overflow: hidden;
@@ -35,6 +47,11 @@
 }
 
 /* left - mode */
+.drawer-left-mode .drawer {
+  border-top-right-radius: var(--drawer-border-radius);
+  border-bottom-right-radius: var(--drawer-border-radius);
+}
+
 .drawer-left-mode .drawer.close {
   width: 0%;
   overflow: hidden;
@@ -48,6 +65,11 @@
 }
 
 /* right - mode */
+.drawer-right-mode .drawer {
+  border-top-left-radius: var(--drawer-border-radius);
+  border-bottom-left-radius: var(--drawer-border-radius);
+}
+
 .drawer-right-mode .drawer.close {
   width: 0%;
   overflow: hidden;
