@@ -40,7 +40,7 @@ const Drawer = (props: IDrawerProps) => {
         height,
         transition: `${transitionMode} ${speed}s linear, padding ${
           speed / 4
-        }s linear`
+        }s linear, box-shadow ${speed}s linear`
       }}
     >
       <div className='drawer-content'>{children}</div>
