@@ -1,7 +1,7 @@
 /* general style */
 .drawer {
   overflow: auto;
-  background: whitesmoke;
+  background: rgb(248, 248, 248);
 
   --drawer-border-radius: 8px;
 }
