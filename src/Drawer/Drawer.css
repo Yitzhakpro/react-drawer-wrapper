@@ -3,6 +3,10 @@
   overflow: auto;
 }
 
+.drawer-content {
+  padding: 0.5%;
+}
+
 /* top - mode */
 .drawer-top-mode .drawer.close {
   height: 0% !important;
