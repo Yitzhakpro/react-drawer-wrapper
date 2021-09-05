@@ -4,7 +4,9 @@ import {
   DEFAULT_DRAWER_BTN_SIZE,
   DEFAULT_DRAWER_STATE,
   DEFAULT_DRAWER_DIRECTION,
-  DEFAULT_DRAWER_TRANSITION_SPEED
+  DEFAULT_DRAWER_TRANSITION_SPEED,
+  getDefaultDrawerHeight,
+  getDefaultDrawerWidth
 } from '../Constants'
 import ModeButton from '../ModeButton'
 import './content.css'
@@ -15,7 +17,7 @@ export interface IContentProps {
   buttonSize?: 'short' | 'long'
   open?: boolean
   onModeChange?: (nextMode: boolean) => any
-  direction?: string
+  direction?: 'top' | 'bottom' | 'left' | 'right'
   speed?: number
   height?: string
   width?: string
@@ -31,8 +33,8 @@ const Content = (props: IContentProps) => {
     onModeChange = () => {},
     direction = DEFAULT_DRAWER_DIRECTION,
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
-    height = direction === 'left' || direction === 'right' ? '100%' : '20%',
-    width = direction === 'left' || direction === 'right' ? '30%' : '100%',
+    height = getDefaultDrawerHeight(direction),
+    width = getDefaultDrawerWidth(direction),
     children
   } = props
 

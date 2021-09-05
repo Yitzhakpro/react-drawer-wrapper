@@ -3,7 +3,9 @@ import clsx from 'clsx'
 import {
   DEFAULT_DRAWER_STATE,
   DEFAULT_DRAWER_DIRECTION,
-  DEFAULT_DRAWER_TRANSITION_SPEED
+  DEFAULT_DRAWER_TRANSITION_SPEED,
+  getDefaultDrawerHeight,
+  getDefaultDrawerWidth
 } from '../Constants'
 import './Drawer.css'
 
@@ -25,8 +27,8 @@ const Drawer = (props: IDrawerProps) => {
     open = DEFAULT_DRAWER_STATE,
     direction = DEFAULT_DRAWER_DIRECTION,
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
-    height = direction === 'left' || direction === 'right' ? '100%' : '20%',
-    width = direction === 'left' || direction === 'right' ? '30%' : '100%',
+    height = getDefaultDrawerHeight(direction),
+    width = getDefaultDrawerWidth(direction),
     children
   } = props
 

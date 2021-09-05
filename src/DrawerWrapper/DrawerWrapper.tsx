@@ -5,7 +5,9 @@ import Content from '../Content'
 import {
   DEFAULT_DRAWER_STATE,
   DEFAULT_DRAWER_DIRECTION,
-  DEFAULT_DRAWER_TRANSITION_SPEED
+  DEFAULT_DRAWER_TRANSITION_SPEED,
+  getDefaultDrawerHeight,
+  getDefaultDrawerWidth
 } from '../Constants'
 import './drawerWrapper.css'
 
@@ -30,8 +32,8 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
     open = DEFAULT_DRAWER_STATE,
     onModeChange,
     direction = DEFAULT_DRAWER_DIRECTION,
-    height = direction === 'left' || direction === 'right' ? '100%' : '20%',
-    width = direction === 'left' || direction === 'right' ? '30%' : '100%',
+    height = getDefaultDrawerHeight(direction),
+    width = getDefaultDrawerWidth(direction),
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
     children
   } = props
