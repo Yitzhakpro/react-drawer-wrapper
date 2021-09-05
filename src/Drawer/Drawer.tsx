@@ -14,6 +14,7 @@ export interface IDrawerProps {
   direction?: 'top' | 'bottom' | 'left' | 'right'
   speed?: number
   height?: string
+  width?: string
   children?: React.ReactNode | React.ReactNode[]
 }
 
@@ -25,6 +26,7 @@ const Drawer = (props: IDrawerProps) => {
     direction = DEFAULT_DRAWER_DIRECTION,
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
     height = direction === 'left' || direction === 'right' ? '100%' : '20%',
+    width = direction === 'left' || direction === 'right' ? '30%' : '100%',
     children
   } = props
 
@@ -38,9 +40,10 @@ const Drawer = (props: IDrawerProps) => {
       style={{
         ...style,
         height,
-        transition: `${transitionMode} ${speed}s linear, padding ${
+        width,
+        transition: `${transitionMode} ${speed}s ease-out, padding ${
           speed / 4
-        }s linear, box-shadow ${speed}s linear`
+        }s ease-out, box-shadow ${speed}s ease-out`
       }}
     >
       <div className='drawer-content'>{children}</div>

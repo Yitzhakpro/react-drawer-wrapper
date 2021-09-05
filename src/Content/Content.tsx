@@ -17,6 +17,8 @@ export interface IContentProps {
   onModeChange?: (nextMode: boolean) => any
   direction?: string
   speed?: number
+  height?: string
+  width?: string
   children?: React.ReactNode | React.ReactNode[]
 }
 
@@ -29,6 +31,8 @@ const Content = (props: IContentProps) => {
     onModeChange = () => {},
     direction = DEFAULT_DRAWER_DIRECTION,
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
+    height = direction === 'left' || direction === 'right' ? '100%' : '20%',
+    width = direction === 'left' || direction === 'right' ? '30%' : '100%',
     children
   } = props
 
@@ -39,7 +43,13 @@ const Content = (props: IContentProps) => {
   return (
     <div
       className={clsx(className, standardClassName)}
-      style={{ ...style, transition: `${transitionMode} ${speed}s linear` }}
+      style={{
+        ...style,
+        [transitionMode]: `calc(100% - ${
+          transitionMode === 'width' ? width : height
+        })`,
+        transition: `${transitionMode} ${speed}s ease-out`
+      }}
     >
       <ModeButton size={buttonSize} open={open} onModeChange={onModeChange} />
       {children}
