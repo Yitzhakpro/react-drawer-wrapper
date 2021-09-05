@@ -53,13 +53,11 @@
 }
 
 .drawer-left-mode .drawer.close {
-  width: 0%;
+  width: 0% !important;
   overflow: hidden;
 }
 
 .drawer-left-mode .drawer.open {
-  width: 30%;
-
   -webkit-box-shadow: 2px 0px 14px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 0px 14px 4px rgba(0, 0, 0, 0.1);
 }
@@ -71,13 +69,11 @@
 }
 
 .drawer-right-mode .drawer.close {
-  width: 0%;
+  width: 0% !important;
   overflow: hidden;
 }
 
 .drawer-right-mode .drawer.open {
-  width: 30%;
-
   -webkit-box-shadow: -2px 0px 14px 4px rgba(0, 0, 0, 0.1);
   box-shadow: -2px 0px 14px 4px rgba(0, 0, 0, 0.1);
 }

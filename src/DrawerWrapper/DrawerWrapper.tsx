@@ -5,13 +5,17 @@ import Content from '../Content'
 import {
   DEFAULT_DRAWER_STATE,
   DEFAULT_DRAWER_DIRECTION,
-  DEFAULT_DRAWER_TRANSITION_SPEED
+  DEFAULT_DRAWER_TRANSITION_SPEED,
+  getDefaultDrawerHeight,
+  getDefaultDrawerWidth
 } from '../Constants'
 import './drawerWrapper.css'
 
 interface IDrawerWrapperProps {
   className?: string
   style?: React.CSSProperties
+  height?: string
+  width?: string
   buttonSize?: 'short' | 'long'
   open: boolean
   onModeChange: (nextMode: boolean) => any
@@ -28,6 +32,8 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
     open = DEFAULT_DRAWER_STATE,
     onModeChange,
     direction = DEFAULT_DRAWER_DIRECTION,
+    height = getDefaultDrawerHeight(direction),
+    width = getDefaultDrawerWidth(direction),
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
     children
   } = props
@@ -43,7 +49,13 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
       {React.Children.map(children, (child: any) => {
         switch (child.type.displayName) {
           case 'Drawer':
-            return React.cloneElement(child, { open, direction, speed })
+            return React.cloneElement(child, {
+              open,
+              direction,
+              height,
+              width,
+              speed
+            })
 
           case 'Content':
             return React.cloneElement(child, {
@@ -51,6 +63,8 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
               open,
               onModeChange,
               direction,
+              height,
+              width,
               speed
             })
 

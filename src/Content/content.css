@@ -5,36 +5,20 @@
 
 /* top - mode */
 .drawer-top-mode .drawer-wrapper-content.close {
-  height: 100%;
-}
-
-.drawer-top-mode .drawer-wrapper-content.open {
-  height: 80%;
+  height: 100% !important;
 }
 
 /* bottom - mode */
 .drawer-bottom-mode .drawer-wrapper-content.close {
-  height: 100%;
-}
-
-.drawer-bottom-mode .drawer-wrapper-content.open {
-  height: 80%;
+  height: 100% !important;
 }
 
 /* left - mode */
 .drawer-left-mode .drawer-wrapper-content.close {
-  width: 100%;
-}
-
-.drawer-left-mode .drawer-wrapper-content.open {
-  width: 70%;
+  width: 100% !important;
 }
 
 /* right - mode */
 .drawer-right-mode .drawer-wrapper-content.close {
-  width: 100%;
-}
-
-.drawer-right-mode .drawer-wrapper-content.open {
-  width: 70%;
+  width: 100% !important;
 }

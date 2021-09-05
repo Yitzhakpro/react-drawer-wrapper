@@ -4,7 +4,9 @@ import {
   DEFAULT_DRAWER_BTN_SIZE,
   DEFAULT_DRAWER_STATE,
   DEFAULT_DRAWER_DIRECTION,
-  DEFAULT_DRAWER_TRANSITION_SPEED
+  DEFAULT_DRAWER_TRANSITION_SPEED,
+  getDefaultDrawerHeight,
+  getDefaultDrawerWidth
 } from '../Constants'
 import ModeButton from '../ModeButton'
 import './content.css'
@@ -15,8 +17,10 @@ export interface IContentProps {
   buttonSize?: 'short' | 'long'
   open?: boolean
   onModeChange?: (nextMode: boolean) => any
-  direction?: string
+  direction?: 'top' | 'bottom' | 'left' | 'right'
   speed?: number
+  height?: string
+  width?: string
   children?: React.ReactNode | React.ReactNode[]
 }
 
@@ -29,17 +33,25 @@ const Content = (props: IContentProps) => {
     onModeChange = () => {},
     direction = DEFAULT_DRAWER_DIRECTION,
     speed = DEFAULT_DRAWER_TRANSITION_SPEED,
+    height = getDefaultDrawerHeight(direction),
+    width = getDefaultDrawerWidth(direction),
     children
   } = props
 
   const standardClassName = `drawer-wrapper-content ${open ? 'open' : 'close'}`
-  const transitionMode =
+  const directionMode =
     direction === 'left' || direction === 'right' ? 'width' : 'height'
 
   return (
     <div
       className={clsx(className, standardClassName)}
-      style={{ ...style, transition: `${transitionMode} ${speed}s linear` }}
+      style={{
+        ...style,
+        [directionMode]: `calc(100% - ${
+          directionMode === 'width' ? width : height
+        })`,
+        transition: `${directionMode} ${speed}s ease-out`
+      }}
     >
       <ModeButton size={buttonSize} open={open} onModeChange={onModeChange} />
       {children}
