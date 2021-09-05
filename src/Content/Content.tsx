@@ -39,7 +39,7 @@ const Content = (props: IContentProps) => {
   } = props
 
   const standardClassName = `drawer-wrapper-content ${open ? 'open' : 'close'}`
-  const transitionMode =
+  const directionMode =
     direction === 'left' || direction === 'right' ? 'width' : 'height'
 
   return (
@@ -47,10 +47,10 @@ const Content = (props: IContentProps) => {
       className={clsx(className, standardClassName)}
       style={{
         ...style,
-        [transitionMode]: `calc(100% - ${
-          transitionMode === 'width' ? width : height
+        [directionMode]: `calc(100% - ${
+          directionMode === 'width' ? width : height
         })`,
-        transition: `${transitionMode} ${speed}s ease-out`
+        transition: `${directionMode} ${speed}s ease-out`
       }}
     >
       <ModeButton size={buttonSize} open={open} onModeChange={onModeChange} />

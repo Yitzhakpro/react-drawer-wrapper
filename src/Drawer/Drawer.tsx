@@ -33,7 +33,7 @@ const Drawer = (props: IDrawerProps) => {
   } = props
 
   const drawerClassName = open ? 'drawer open' : 'drawer close'
-  const transitionMode =
+  const directionMode =
     direction === 'left' || direction === 'right' ? 'width' : 'height'
 
   return (
@@ -43,7 +43,7 @@ const Drawer = (props: IDrawerProps) => {
         ...style,
         height,
         width,
-        transition: `${transitionMode} ${speed}s ease-out, padding ${
+        transition: `${directionMode} ${speed}s ease-out, padding ${
           speed / 4
         }s ease-out, box-shadow ${speed}s ease-out`
       }}
