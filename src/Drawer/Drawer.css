@@ -10,15 +10,17 @@
   padding: 0.5%;
 }
 
+/* top - down related */
+.react-drawer-wrapper.drawer-top-mode .drawer.close,
+.react-drawer-wrapper.drawer-bottom-mode .drawer.close {
+  height: 0% !important;
+  overflow: hidden;
+}
+
 /* top - mode */
 .react-drawer-wrapper.drawer-top-mode .drawer {
   border-bottom-left-radius: var(--drawer-border-radius);
   border-bottom-right-radius: var(--drawer-border-radius);
-}
-
-.react-drawer-wrapper.drawer-top-mode .drawer.close {
-  height: 0% !important;
-  overflow: hidden;
 }
 
 .react-drawer-wrapper.drawer-top-mode .drawer.open {
@@ -34,27 +36,23 @@
   border-top-right-radius: var(--drawer-border-radius);
 }
 
-.react-drawer-wrapper.drawer-bottom-mode .drawer.close {
-  height: 0% !important;
-  overflow: hidden;
-}
-
 .react-drawer-wrapper.drawer-bottom-mode .drawer.open {
   overflow: auto;
 
   -webkit-box-shadow: 0px -4px 14px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0px -4px 14px 4px rgba(0, 0, 0, 0.1);
 }
+/* left - right related */
+.react-drawer-wrapper.drawer-left-mode .drawer.close,
+.react-drawer-wrapper.drawer-right-mode .drawer.close {
+  width: 0% !important;
+  overflow: hidden;
+}
 
 /* left - mode */
 .react-drawer-wrapper.drawer-left-mode .drawer {
   border-top-right-radius: var(--drawer-border-radius);
   border-bottom-right-radius: var(--drawer-border-radius);
-}
-
-.react-drawer-wrapper.drawer-left-mode .drawer.close {
-  width: 0% !important;
-  overflow: hidden;
 }
 
 .react-drawer-wrapper.drawer-left-mode .drawer.open {
@@ -66,11 +64,6 @@
 .react-drawer-wrapper.drawer-right-mode .drawer {
   border-top-left-radius: var(--drawer-border-radius);
   border-bottom-left-radius: var(--drawer-border-radius);
-}
-
-.react-drawer-wrapper.drawer-right-mode .drawer.close {
-  width: 0% !important;
-  overflow: hidden;
 }
 
 .react-drawer-wrapper.drawer-right-mode .drawer.open {
