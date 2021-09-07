@@ -21,7 +21,7 @@ const ModeButton = (props: IModeButtonProps) => {
 
   return (
     <button
-      className={clsx(className, 'drawer-wrapper-mode-btn', size)}
+      className={clsx(className, 'react-drawer-wrapper-mode-btn', size)}
       onClick={() => onModeChange(!open)}
     >
       <Arrow height='20px' width='20px' />

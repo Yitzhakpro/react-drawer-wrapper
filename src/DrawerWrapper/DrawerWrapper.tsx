@@ -43,7 +43,11 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
 
   return (
     <div
-      className={clsx(className, 'drawer-wrapper', `drawer-${direction}-mode`)}
+      className={clsx(
+        className,
+        'react-drawer-wrapper',
+        `drawer-${direction}-mode`
+      )}
       style={style}
     >
       {React.Children.map(children, (child: any) => {
