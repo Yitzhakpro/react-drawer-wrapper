@@ -1,6 +1,7 @@
 /* general styles */
 .react-drawer-wrapper .drawer-wrapper-content {
   position: relative;
+  overflow: auto;
 }
 
 /* top - bottom mode */
