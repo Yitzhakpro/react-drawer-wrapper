@@ -44,9 +44,9 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
   return (
     <div
       className={clsx(
-        className,
         'react-drawer-wrapper',
-        `drawer-${direction}-mode`
+        `drawer-${direction}-mode`,
+        className
       )}
       style={style}
     >

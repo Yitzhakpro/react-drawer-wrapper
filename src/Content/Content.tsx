@@ -44,7 +44,7 @@ const Content = (props: IContentProps) => {
 
   return (
     <div
-      className={clsx(className, standardClassName)}
+      className={clsx(standardClassName, className)}
       style={{
         ...style,
         [directionMode]: `calc(100% - ${

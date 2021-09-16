@@ -38,7 +38,7 @@ const Drawer = (props: IDrawerProps) => {
 
   return (
     <div
-      className={clsx(className, drawerClassName)}
+      className={clsx(drawerClassName, className)}
       style={{
         ...style,
         height,
