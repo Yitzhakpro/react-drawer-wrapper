@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { DrawerWrapper } from '.';
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+describe('DrawerWrapper', () => {
+    it('is truthy', () => {
+        expect(DrawerWrapper).toBeTruthy();
+    });
+});

@@ -1,76 +1,76 @@
 /* general style */
 .react-drawer-wrapper .drawer {
-  overflow: auto;
-  background: rgb(248, 248, 248);
+    overflow: auto;
+    background: rgb(248, 248, 248);
 
-  --drawer-border-radius: 10px;
+    --drawer-border-radius: 10px;
 }
 
 .react-drawer-wrapper .drawer-content {
-  padding: 0.5%;
+    padding: 0.5%;
 }
 
 /* top - down related */
 .react-drawer-wrapper.drawer-top-mode .drawer.close,
 .react-drawer-wrapper.drawer-bottom-mode .drawer.close {
-  height: 0% !important;
-  overflow: hidden;
+    height: 0% !important;
+    overflow: hidden;
 }
 
 /* top - mode */
 .react-drawer-wrapper.drawer-top-mode .drawer {
-  border-bottom-left-radius: var(--drawer-border-radius);
-  border-bottom-right-radius: var(--drawer-border-radius);
+    border-bottom-left-radius: var(--drawer-border-radius);
+    border-bottom-right-radius: var(--drawer-border-radius);
 }
 
 .react-drawer-wrapper.drawer-top-mode .drawer.open {
-  overflow: auto;
+    overflow: auto;
 
-  -webkit-box-shadow: 0px 4px 14px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 4px 14px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 4px 14px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 14px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* bottom - mode */
 .react-drawer-wrapper.drawer-bottom-mode .drawer {
-  border-top-left-radius: var(--drawer-border-radius);
-  border-top-right-radius: var(--drawer-border-radius);
+    border-top-left-radius: var(--drawer-border-radius);
+    border-top-right-radius: var(--drawer-border-radius);
 }
 
 .react-drawer-wrapper.drawer-bottom-mode .drawer {
-  z-index: 99999;
+    z-index: 99999;
 }
 
 .react-drawer-wrapper.drawer-bottom-mode .drawer.open {
-  overflow: auto;
+    overflow: auto;
 
-  -webkit-box-shadow: 0px -4px 14px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px -4px 14px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px -4px 14px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -4px 14px 4px rgba(0, 0, 0, 0.1);
 }
 /* left - right related */
 .react-drawer-wrapper.drawer-left-mode .drawer.close,
 .react-drawer-wrapper.drawer-right-mode .drawer.close {
-  width: 0% !important;
-  overflow: hidden;
+    width: 0% !important;
+    overflow: hidden;
 }
 
 /* left - mode */
 .react-drawer-wrapper.drawer-left-mode .drawer {
-  border-top-right-radius: var(--drawer-border-radius);
-  border-bottom-right-radius: var(--drawer-border-radius);
+    border-top-right-radius: var(--drawer-border-radius);
+    border-bottom-right-radius: var(--drawer-border-radius);
 }
 
 .react-drawer-wrapper.drawer-left-mode .drawer.open {
-  -webkit-box-shadow: 2px 0px 14px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 2px 0px 14px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 2px 0px 14px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0px 14px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* right - mode */
 .react-drawer-wrapper.drawer-right-mode .drawer {
-  border-top-left-radius: var(--drawer-border-radius);
-  border-bottom-left-radius: var(--drawer-border-radius);
+    border-top-left-radius: var(--drawer-border-radius);
+    border-bottom-left-radius: var(--drawer-border-radius);
 }
 
 .react-drawer-wrapper.drawer-right-mode .drawer.open {
-  -webkit-box-shadow: -2px 0px 14px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: -2px 0px 14px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: -2px 0px 14px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 0px 14px 4px rgba(0, 0, 0, 0.1);
 }

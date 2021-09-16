@@ -1,3 +1,3 @@
-import ModeButton from './ModeButton'
+import ModeButton from './ModeButton';
 
-export default ModeButton
+export default ModeButton;

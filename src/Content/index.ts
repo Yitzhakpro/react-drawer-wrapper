@@ -1,3 +1,3 @@
-import content from './Content'
+import content from './Content';
 
-export default content
+export default content;
