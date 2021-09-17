@@ -1,10 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Layout } from 'antd';
+import { SideNav, DocsPage, FooterBar } from './components';
+import 'react-drawer-wrapper/dist/index.css';
+import 'antd/dist/antd.css';
 
-import { ExampleComponent } from 'react-drawer-resizable'
-import 'react-drawer-resizable/dist/index.css'
+const { Content } = Layout;
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+    const [sideMenuCollapsed, setSideMenuCollapsed] = useState(false);
 
-export default App
+    const handleSideMenuOnCollapse = (collapsed: boolean) => {
+        setSideMenuCollapsed(collapsed);
+    };
+
+    return (
+        <Router>
+            <Layout style={{ minHeight: '100vh' }}>
+                <SideNav
+                    collapsed={sideMenuCollapsed}
+                    onCollapse={handleSideMenuOnCollapse}
+                />
+                <Layout>
+                    <Content>
+                        <Switch>
+                            <Route exact path='/' component={DocsPage} />
+                            <Route
+                                path='/examples'
+                                component={() => <h1>examples</h1>}
+                            />
+                        </Switch>
+                    </Content>
+                    <FooterBar />
+                </Layout>
+            </Layout>
+        </Router>
+    );
+};
+
+export default App;
