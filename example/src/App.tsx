@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Layout } from 'antd';
-import { SideNav, DocsPage, FooterBar } from './components';
+import { SideNav, DocsPage, Examples, FooterBar } from './components';
 import 'react-drawer-wrapper/dist/index.css';
 import 'antd/dist/antd.css';
 
@@ -25,10 +25,7 @@ const App = () => {
                     <Content>
                         <Switch>
                             <Route exact path='/' component={DocsPage} />
-                            <Route
-                                path='/examples'
-                                component={() => <h1>examples</h1>}
-                            />
+                            <Route path='/examples' component={Examples} />
                         </Switch>
                     </Content>
                     <FooterBar />
