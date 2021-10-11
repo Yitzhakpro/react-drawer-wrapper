@@ -18,6 +18,13 @@ const SideNav = ({ collapsed, onCollapse }: ISideNavProps) => {
     return (
         <Sider
             theme='light'
+            style={{
+                overflow: 'auto',
+                height: '100vh',
+                position: 'sticky',
+                top: 0,
+                left: 0
+            }}
             collapsible
             collapsed={collapsed}
             onCollapse={onCollapse}
