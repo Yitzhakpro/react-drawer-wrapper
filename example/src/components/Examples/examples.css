@@ -1,0 +1,14 @@
+.example-section {
+    padding: 1% 1%;
+    margin: 2% 0;
+    background-color: white;
+
+    border-radius: 15px;
+}
+
+.sample-drawer-wrapper {
+    background: whitesmoke;
+
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
