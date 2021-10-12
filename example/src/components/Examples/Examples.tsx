@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import SampleDrawerWrapper from './SampleDrawerWrapper';
-import { Radio, Slider, Input, Select } from 'antd';
+import { Radio, Slider, Divider, Input, Select } from 'antd';
 import type { RadioChangeEvent } from 'antd';
+import './examples.css';
 
 type directionType = 'left' | 'right' | 'top' | 'bottom';
 type btnSizeType = 'long' | 'short';
@@ -73,7 +74,7 @@ const Examples = () => {
     };
 
     return (
-        <div className='examples-page' style={{ margin: '1% 10%' }}>
+        <div className='examples-page' style={{ margin: '1% 5%' }}>
             <div className='example-section'>
                 <h1>Change direction & Button Size</h1>
                 <h4>
@@ -91,6 +92,14 @@ const Examples = () => {
                     <Radio value='left'>Left</Radio>
                     <Radio value='right'>Right</Radio>
                 </Radio.Group>
+
+                <Divider
+                    type='vertical'
+                    style={{
+                        margin: '0 0.5%',
+                        background: '#333'
+                    }}
+                />
 
                 <Radio.Group value={btnSize} onChange={onBtnSizeChange}>
                     <Radio value='long'>Long</Radio>
@@ -140,7 +149,12 @@ const Examples = () => {
                     </Select>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row'
+                    }}
+                >
                     <span>Width: </span>
                     <Input
                         style={{ width: '15%' }}

@@ -22,6 +22,7 @@ const SampleDrawerWrapper = ({
 }: ISampleDrawerWrapperProps) => {
     return (
         <DrawerWrapper
+            className='sample-drawer-wrapper'
             style={{ height: '500px' }}
             direction={direction}
             buttonSize={buttonSize}
@@ -31,10 +32,22 @@ const SampleDrawerWrapper = ({
             open={open}
             onModeChange={onModeChange}
         >
-            <DrawerWrapper.Drawer>
+            <DrawerWrapper.Drawer
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}
+            >
                 <p>sample drawer</p>
             </DrawerWrapper.Drawer>
-            <DrawerWrapper.Content>
+            <DrawerWrapper.Content
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}
+            >
                 <p>sample content</p>
             </DrawerWrapper.Content>
         </DrawerWrapper>
