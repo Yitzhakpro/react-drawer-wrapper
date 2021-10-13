@@ -8,17 +8,17 @@ jobs:
     npm-publish:
         name: npm-publish
         runs-on: ubuntu-latest
-          steps:
+        steps:
             - name: Checkout Repo
               uses: actions/checkout@v2
             - name: setup node
               uses: actions/setup-node@v1
               with:
-                node-version: 12
-                registry-url: https://registry.npmjs.org/
+                  node-version: 12
+                  registry-url: https://registry.npmjs.org/
             - run: yarn
             - name: eslint check
               run: npm run test:lint
             - run: yarn publish
               env:
-                NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
