@@ -63,9 +63,7 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
 
                     case 'Content':
                         return React.cloneElement(child, {
-                            buttonSize: buttonSize
-                                ? buttonSize
-                                : buttonModeSize,
+                            buttonSize: buttonSize || buttonModeSize,
                             open,
                             onModeChange,
                             direction,
