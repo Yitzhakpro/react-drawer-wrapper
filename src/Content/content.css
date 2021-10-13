@@ -1,0 +1,17 @@
+/* general styles */
+.react-drawer-wrapper .drawer-wrapper-content {
+    position: relative;
+    overflow: auto;
+}
+
+/* top - bottom mode */
+.react-drawer-wrapper.drawer-top-mode .drawer-wrapper-content.close,
+.react-drawer-wrapper.drawer-bottom-mode .drawer-wrapper-content.close {
+    height: 100% !important;
+}
+
+/* left - right mode */
+.react-drawer-wrapper.drawer-left-mode .drawer-wrapper-content.close,
+.react-drawer-wrapper.drawer-right-mode .drawer-wrapper-content.close {
+    width: 100% !important;
+}

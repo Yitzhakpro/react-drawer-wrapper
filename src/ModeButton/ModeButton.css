@@ -1,0 +1,173 @@
+/* general style */
+.react-drawer-wrapper-mode-btn {
+    /* direction - left | right */
+    --horizontal-long-btn-size: 10vh;
+    --horizontal-short-btn-size: 5vh;
+
+    /* direction - top | bottom */
+    --vertical-long-btn-size: 10vw;
+    --vertical-short-btn-size: 5vw;
+
+    /* btn border radius */
+    --btn-border-radius: 15px;
+
+    padding: 0;
+    border: 0;
+
+    color: #333;
+    cursor: pointer;
+}
+
+.react-drawer-wrapper-mode-btn:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+.open .react-drawer-wrapper-mode-btn {
+    background: whitesmoke;
+    color: rgb(221, 54, 54);
+    transition: background 0.05s linear;
+}
+
+.open .react-drawer-wrapper-mode-btn:hover {
+    background: rgb(201, 49, 49);
+    color: white;
+}
+
+/* top - bottom related */
+.drawer-top-mode .react-drawer-wrapper-mode-btn,
+.drawer-bottom-mode .react-drawer-wrapper-mode-btn {
+    position: absolute;
+}
+
+.drawer-top-mode .react-drawer-wrapper-mode-btn.short,
+.drawer-bottom-mode .react-drawer-wrapper-mode-btn.short {
+    width: var(--vertical-short-btn-size);
+    left: calc(50% - (var(--vertical-short-btn-size) / 2));
+}
+
+.drawer-top-mode .react-drawer-wrapper-mode-btn.long,
+.drawer-bottom-mode .react-drawer-wrapper-mode-btn.long {
+    width: var(--vertical-long-btn-size);
+    left: calc(50% - (var(--vertical-long-btn-size) / 2));
+}
+
+/* top - mode */
+.drawer-top-mode .react-drawer-wrapper-mode-btn {
+    top: 0;
+
+    border-bottom-left-radius: var(--btn-border-radius);
+    border-bottom-right-radius: var(--btn-border-radius);
+
+    -webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-top-mode .react-drawer-wrapper-mode-btn svg {
+    transition: margin-top 0.05s linear;
+}
+
+.drawer-top-mode .react-drawer-wrapper-mode-btn:hover svg {
+    margin-top: 1vh;
+}
+
+.drawer-top-mode .open .react-drawer-wrapper-mode-btn svg {
+    transform: rotate(180deg);
+}
+
+/* bottom - mode */
+.drawer-bottom-mode .react-drawer-wrapper-mode-btn {
+    bottom: 0;
+
+    border-top-left-radius: var(--btn-border-radius);
+    border-top-right-radius: var(--btn-border-radius);
+
+    -webkit-box-shadow: 0px -5px 10px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -5px 10px -1px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-bottom-mode .react-drawer-wrapper-mode-btn svg {
+    transition: margin-bottom 0.05s linear;
+}
+
+.drawer-bottom-mode .react-drawer-wrapper-mode-btn:hover svg {
+    margin-bottom: 1vh;
+}
+
+.drawer-bottom-mode .react-drawer-wrapper-mode-btn svg {
+    transform: rotate(180deg);
+}
+
+.drawer-bottom-mode .open .react-drawer-wrapper-mode-btn svg {
+    transform: rotate(0deg);
+}
+
+/* left-right related */
+.drawer-left-mode .react-drawer-wrapper-mode-btn,
+.drawer-right-mode .react-drawer-wrapper-mode-btn {
+    position: absolute;
+    top: 10%;
+}
+
+.drawer-left-mode .react-drawer-wrapper-mode-btn.short,
+.drawer-right-mode .react-drawer-wrapper-mode-btn.short {
+    height: var(--horizontal-short-btn-size);
+}
+
+.drawer-left-mode .react-drawer-wrapper-mode-btn.long,
+.drawer-right-mode .react-drawer-wrapper-mode-btn.long {
+    height: var(--horizontal-long-btn-size);
+}
+
+/* left - mode */
+.drawer-left-mode .react-drawer-wrapper-mode-btn {
+    left: 0px;
+
+    border-top-right-radius: var(--btn-border-radius);
+    border-bottom-right-radius: var(--btn-border-radius);
+
+    -webkit-box-shadow: 5px 0px 10px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 0px 10px -1px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-left-mode .react-drawer-wrapper-mode-btn svg {
+    transition: margin-left 0.05s linear;
+}
+
+.drawer-left-mode .react-drawer-wrapper-mode-btn:hover svg {
+    margin-left: 1.5vh;
+}
+
+.drawer-left-mode .react-drawer-wrapper-mode-btn svg {
+    transform: rotate(-90deg);
+}
+
+.drawer-left-mode .open .react-drawer-wrapper-mode-btn svg {
+    transform: rotate(90deg);
+}
+
+/* right - mode */
+.drawer-right-mode .react-drawer-wrapper-mode-btn {
+    right: 0;
+
+    border-top-left-radius: var(--btn-border-radius);
+    border-bottom-left-radius: var(--btn-border-radius);
+
+    -webkit-box-shadow: -5px 0px 10px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: -5px 0px 10px -1px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-right-mode .react-drawer-wrapper-mode-btn svg {
+    transition: margin-right 0.05s linear;
+}
+
+.drawer-right-mode .react-drawer-wrapper-mode-btn:hover svg {
+    margin-right: 1.5vh;
+}
+
+.drawer-right-mode .react-drawer-wrapper-mode-btn svg {
+    transform: rotate(90deg);
+}
+
+.drawer-right-mode .open .react-drawer-wrapper-mode-btn svg {
+    transform: rotate(-90deg);
+}

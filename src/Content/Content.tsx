@@ -1,12 +1,70 @@
-import * as React from 'react'
-import './content.css'
+import * as React from 'react';
+import clsx from 'clsx';
+import {
+    DEFAULT_DRAWER_BTN_SIZE,
+    DEFAULT_DRAWER_STATE,
+    DEFAULT_DRAWER_DIRECTION,
+    DEFAULT_DRAWER_TRANSITION_SPEED,
+    getDefaultDrawerHeight,
+    getDefaultDrawerWidth
+} from '../Constants';
+import ModeButton from '../ModeButton';
+import './content.css';
 
 export interface IContentProps {
-  children?: React.ReactNode | React.ReactNode[]
+    className?: string;
+    style?: React.CSSProperties;
+    buttonSize?: 'short' | 'long';
+    open?: boolean;
+    onModeChange?: (nextMode: boolean) => any;
+    direction?: 'top' | 'bottom' | 'left' | 'right';
+    speed?: number;
+    height?: string;
+    width?: string;
+    children?: React.ReactNode | React.ReactNode[];
 }
 
-const content = ({ children }: IContentProps) => {
-  return <div>{children}</div>
-}
+const Content = (props: IContentProps) => {
+    const {
+        className,
+        style,
+        buttonSize = DEFAULT_DRAWER_BTN_SIZE,
+        open = DEFAULT_DRAWER_STATE,
+        onModeChange = () => {},
+        direction = DEFAULT_DRAWER_DIRECTION,
+        speed = DEFAULT_DRAWER_TRANSITION_SPEED,
+        height = getDefaultDrawerHeight(direction),
+        width = getDefaultDrawerWidth(direction),
+        children
+    } = props;
 
-export default content
+    const standardClassName = `drawer-wrapper-content ${
+        open ? 'open' : 'close'
+    }`;
+    const directionMode =
+        direction === 'left' || direction === 'right' ? 'width' : 'height';
+
+    return (
+        <div
+            className={clsx(standardClassName, className)}
+            style={{
+                ...style,
+                [directionMode]: `calc(100% - ${
+                    directionMode === 'width' ? width : height
+                })`,
+                transition: `${directionMode} ${speed}s ease-out`
+            }}
+        >
+            <ModeButton
+                size={buttonSize}
+                open={open}
+                onModeChange={onModeChange}
+            />
+            {children}
+        </div>
+    );
+};
+
+Content.displayName = 'Content';
+
+export default Content;
