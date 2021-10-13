@@ -5,6 +5,15 @@ on:
             - main
 
 jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v2
+            - name: Install Modules
+              run: yarn
+            - name: Run Eslint
+              run: npm run test:lint
     npm-publish:
         name: npm-publish
         runs-on: ubuntu-latest
