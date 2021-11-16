@@ -17,13 +17,7 @@ describe('Basic mode button tests', () => {
     it('Should inject given class name', () => {
         const testClass = 'test';
 
-        render(
-            <ModeButton
-                className={testClass}
-                open={false}
-                onModeChange={mockedOnModeChange}
-            />
-        );
+        render(<ModeButton className={testClass} open={false} onModeChange={mockedOnModeChange} />);
 
         const button = screen.getByRole('button');
         expect(button).toHaveClass(testClass);
@@ -32,16 +26,8 @@ describe('Basic mode button tests', () => {
     it('Should inject size class to mode button', () => {
         render(
             <>
-                <ModeButton
-                    open={false}
-                    onModeChange={mockedOnModeChange}
-                    size='long'
-                />
-                <ModeButton
-                    open={false}
-                    onModeChange={mockedOnModeChange}
-                    size='short'
-                />
+                <ModeButton open={false} onModeChange={mockedOnModeChange} size='long' />
+                <ModeButton open={false} onModeChange={mockedOnModeChange} size='short' />
             </>
         );
 
