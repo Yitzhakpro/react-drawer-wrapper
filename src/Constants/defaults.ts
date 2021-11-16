@@ -3,7 +3,7 @@ export const DEFAULT_DRAWER_STATE = false; // open (true) - not open (false)
 export const DEFAULT_DRAWER_DIRECTION = 'left';
 export const DEFAULT_DRAWER_TRANSITION_SPEED = 0.3;
 
-type directionType = 'top' | 'bottom' | 'left' | 'right';
+export type directionType = 'top' | 'bottom' | 'left' | 'right';
 
 export const getDefaultDrawerHeight = (direction: directionType): '100%' | '20%' => {
     if (direction === 'left' || direction === 'right') {
