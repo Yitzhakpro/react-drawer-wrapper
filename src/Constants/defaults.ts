@@ -5,7 +5,7 @@ export const DEFAULT_DRAWER_TRANSITION_SPEED = 0.3;
 
 type directionType = 'top' | 'bottom' | 'left' | 'right';
 
-export const getDefaultDrawerHeight = (direction: directionType) => {
+export const getDefaultDrawerHeight = (direction: directionType): '100%' | '20%' => {
     if (direction === 'left' || direction === 'right') {
         return '100%';
     } else {
@@ -13,7 +13,7 @@ export const getDefaultDrawerHeight = (direction: directionType) => {
     }
 };
 
-export const getDefaultDrawerWidth = (direction: directionType) => {
+export const getDefaultDrawerWidth = (direction: directionType): '100%' | '30%' => {
     if (direction === 'left' || direction === 'right') {
         return '30%';
     } else {

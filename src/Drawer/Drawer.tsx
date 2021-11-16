@@ -33,8 +33,7 @@ const Drawer = (props: IDrawerProps) => {
     } = props;
 
     const drawerClassName = open ? 'drawer open' : 'drawer close';
-    const directionMode =
-        direction === 'left' || direction === 'right' ? 'width' : 'height';
+    const directionMode = direction === 'left' || direction === 'right' ? 'width' : 'height';
 
     return (
         <div

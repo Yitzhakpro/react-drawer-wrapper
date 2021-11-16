@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SampleDrawerWrapper from './SampleDrawerWrapper';
-import { Radio, Slider, Divider, Input, Select } from 'antd';
-import type { RadioChangeEvent } from 'antd';
+import { Radio, Slider, Divider, Input, Select, RadioChangeEvent } from 'antd';
 import './examples.css';
 
 type directionType = 'left' | 'right' | 'top' | 'bottom';
@@ -77,14 +76,8 @@ const Examples = () => {
         <div className='examples-page' style={{ margin: '1% 5%' }}>
             <div className='example-section'>
                 <h1>Change direction & Button Size</h1>
-                <h4>
-                    When direction is: left / right, the default button size is
-                    "short"
-                </h4>
-                <h4>
-                    When direction is: top / bottom, the default button size is
-                    "long"
-                </h4>
+                <h4>When direction is: left / right, the default button size is "short"</h4>
+                <h4>When direction is: top / bottom, the default button size is "long"</h4>
 
                 <Radio.Group value={direction} onChange={onDirectionChange}>
                     <Radio value='top'>Top</Radio>
@@ -116,12 +109,7 @@ const Examples = () => {
             <div className='example-section'>
                 <h1>Change Speed</h1>
 
-                <Slider
-                    value={speed}
-                    onChange={onSpeedChange}
-                    max={5}
-                    step={0.1}
-                />
+                <Slider value={speed} onChange={onSpeedChange} max={5} step={0.1} />
 
                 <SampleDrawerWrapper
                     speed={speed}

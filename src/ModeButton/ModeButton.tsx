@@ -12,12 +12,7 @@ interface IModeButtonProps {
 }
 
 const ModeButton = (props: IModeButtonProps) => {
-    const {
-        className,
-        size = DEFAULT_DRAWER_BTN_SIZE,
-        open,
-        onModeChange
-    } = props;
+    const { className, size = DEFAULT_DRAWER_BTN_SIZE, open, onModeChange } = props;
 
     return (
         <button

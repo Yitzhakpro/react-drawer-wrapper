@@ -3,18 +3,14 @@
     "jsxSingleQuote": true,
     "semi": true,
     "tabWidth": 4,
+    "printWidth": 100,
     "bracketSpacing": true,
     "jsxBracketSameLine": false,
     "arrowParens": "always",
     "trailingComma": "none",
     "overrides": [
         {
-            "files": [
-                "package.json",
-                ".travis.yml",
-                "tsconfig.json",
-                ".eslintrc"
-            ],
+            "files": ["package.json", ".travis.yml", "tsconfig.json", ".eslintrc"],
             "options": {
                 "tabWidth": 2
             }
