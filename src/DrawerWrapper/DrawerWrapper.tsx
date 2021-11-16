@@ -38,16 +38,11 @@ const DrawerWrapper = (props: IDrawerWrapperProps) => {
         children
     } = props;
 
-    const buttonModeSize =
-        direction === 'left' || direction === 'right' ? 'short' : 'long';
+    const buttonModeSize = direction === 'left' || direction === 'right' ? 'short' : 'long';
 
     return (
         <div
-            className={clsx(
-                'react-drawer-wrapper',
-                `drawer-${direction}-mode`,
-                className
-            )}
+            className={clsx('react-drawer-wrapper', `drawer-${direction}-mode`, className)}
             style={style}
         >
             {React.Children.map(children, (child: any) => {

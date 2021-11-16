@@ -22,12 +22,7 @@ const ArrowIcon = (props: IArrowIconProps) => {
             width={width}
             style={{ transform: `rotate(${rotate}deg)` }}
         >
-            <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M19 9l-7 7-7-7'
-            />
+            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
         </svg>
     );
 };
