@@ -8,9 +8,9 @@ describe('Basic drawer tests', () => {
     it('Should render drawer', () => {
         render(<Drawer />);
 
-        const contentDiv = document.querySelector('.drawer');
+        const drawerDiv = document.querySelector('.drawer');
 
-        expect(contentDiv).toBeTruthy();
+        expect(drawerDiv).toBeTruthy();
     });
 
     it('Should inject given class name', () => {
@@ -18,30 +18,30 @@ describe('Basic drawer tests', () => {
 
         render(<Drawer className={testClass} />);
 
-        const contentDiv = document.querySelector('.drawer');
-        expect(contentDiv).toHaveClass(testClass);
+        const drawerDiv = document.querySelector('.drawer');
+        expect(drawerDiv).toHaveClass(testClass);
     });
 
     it('Should inject given style', () => {
         const backgroundColor = 'green';
         render(<Drawer style={{ backgroundColor }} />);
 
-        const contentDiv = document.querySelector('.drawer');
-        expect(contentDiv).toHaveStyle(`background-color: ${backgroundColor}`);
+        const drawerDiv = document.querySelector('.drawer');
+        expect(drawerDiv).toHaveStyle(`background-color: ${backgroundColor}`);
     });
 
     it('Should have open class when given open={true} prop', () => {
         render(<Drawer open />);
 
-        const contentDiv = document.querySelector('.drawer');
-        expect(contentDiv).toHaveClass('open');
+        const drawerDiv = document.querySelector('.drawer');
+        expect(drawerDiv).toHaveClass('open');
     });
 
     it('Should have close class when given open={false} prop', () => {
         render(<Drawer open={false} />);
 
-        const contentDiv = document.querySelector('.drawer');
-        expect(contentDiv).toHaveClass('close');
+        const drawerDiv = document.querySelector('.drawer');
+        expect(drawerDiv).toHaveClass('close');
     });
 
     it('Should inject given transition speed', () => {
@@ -49,8 +49,8 @@ describe('Basic drawer tests', () => {
 
         render(<Drawer speed={testSpeed} />);
 
-        const contentDiv = document.querySelector('.drawer');
-        expect(contentDiv).toHaveStyle(
+        const drawerDiv = document.querySelector('.drawer');
+        expect(drawerDiv).toHaveStyle(
             `transition: width ${testSpeed}s ease-out, padding ${
                 testSpeed / 4
             }s ease-out, box-shadow ${testSpeed}s ease-out`

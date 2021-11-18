@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { cleanup, render, screen } from '@testing-library/react';
 import Content from '../Content';
 
-describe('Basic conent tests', () => {
+describe('Basic content tests', () => {
     afterEach(cleanup);
     it('Should render content', () => {
         render(<Content />);
@@ -64,5 +64,3 @@ describe('Basic conent tests', () => {
         expect(text).toBeInTheDocument();
     });
 });
-
-describe('Integration content testing', () => {});
