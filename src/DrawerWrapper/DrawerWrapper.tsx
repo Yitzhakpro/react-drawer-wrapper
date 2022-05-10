@@ -9,7 +9,7 @@ import {
     getDefaultDrawerHeight,
     getDefaultDrawerWidth
 } from '../Constants';
-import type { Direction, ButtonSize } from '../types';
+import type { Direction, ButtonSize, OnModeChange } from '../types';
 import './drawerWrapper.css';
 
 interface IDrawerWrapperProps {
@@ -19,7 +19,7 @@ interface IDrawerWrapperProps {
     width?: string;
     buttonSize?: ButtonSize;
     open: boolean;
-    onModeChange: (nextMode: boolean) => any;
+    onModeChange: OnModeChange;
     direction?: Direction;
     speed?: number;
     children?: React.ReactNode | React.ReactNode[];

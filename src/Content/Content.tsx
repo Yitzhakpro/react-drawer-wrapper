@@ -9,7 +9,7 @@ import {
     getDefaultDrawerWidth
 } from '../Constants';
 import ModeButton from '../ModeButton';
-import type { Direction, ButtonSize } from '../types';
+import type { Direction, ButtonSize, OnModeChange } from '../types';
 import './content.css';
 
 export interface IContentProps {
@@ -17,7 +17,7 @@ export interface IContentProps {
     style?: React.CSSProperties;
     buttonSize?: ButtonSize;
     open?: boolean;
-    onModeChange?: (nextMode: boolean) => any;
+    onModeChange?: OnModeChange;
     direction?: Direction;
     speed?: number;
     height?: string;
