@@ -17,10 +17,7 @@ const App = () => {
     return (
         <Router>
             <Layout style={{ minHeight: '100vh' }}>
-                <SideNav
-                    collapsed={sideMenuCollapsed}
-                    onCollapse={handleSideMenuOnCollapse}
-                />
+                <SideNav collapsed={sideMenuCollapsed} onCollapse={handleSideMenuOnCollapse} />
                 <Layout>
                     <Content>
                         <Switch>

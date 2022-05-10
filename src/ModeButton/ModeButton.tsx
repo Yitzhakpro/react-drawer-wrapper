@@ -2,11 +2,12 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { DEFAULT_DRAWER_BTN_SIZE } from '../Constants';
 import Arrow from '../assets/icons/ArrowIcon';
+import type { ButtonSize } from '../types';
 import './ModeButton.css';
 
 interface IModeButtonProps {
     className?: string;
-    size?: 'short' | 'long';
+    size?: ButtonSize;
     open: boolean;
     onModeChange: (nextMode: boolean) => void;
 }
