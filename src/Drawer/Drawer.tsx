@@ -7,13 +7,14 @@ import {
     getDefaultDrawerHeight,
     getDefaultDrawerWidth
 } from '../Constants';
+import type { Direction } from '../types';
 import './Drawer.css';
 
 export interface IDrawerProps {
     className?: string;
     style?: React.CSSProperties;
     open?: boolean;
-    direction?: 'top' | 'bottom' | 'left' | 'right';
+    direction?: Direction;
     speed?: number;
     height?: string;
     width?: string;
